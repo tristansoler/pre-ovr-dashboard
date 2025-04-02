@@ -38,10 +38,9 @@ export class DataWindowComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   
   ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.initDraggable();
-      this.initResizable();
-    }, 0);
+    // Remove the setTimeout - it might be causing issues
+    this.initDraggable();
+    this.initResizable();
   }
   
   ngOnDestroy(): void {
@@ -57,13 +56,16 @@ export class DataWindowComponent implements OnInit, AfterViewInit, OnDestroy {
   
   private initDraggable(): void {
     const element = this.windowElement.nativeElement;
-    const headerEl = this.headerElement.nativeElement;
+    
+    // Ensure current position is correct
+    this.currentPosition = { 
+      x: this.tableState.x || 0, 
+      y: this.tableState.y || 0 
+    };
     
     this.interactable = interact(element)
       .draggable({
-        // Only allow dragging from the header
         allowFrom: '.window-header',
-        // Set initial position
         modifiers: [
           interact.modifiers.restrict({
             restriction: 'parent',
@@ -71,39 +73,54 @@ export class DataWindowComponent implements OnInit, AfterViewInit, OnDestroy {
           })
         ],
         inertia: true,
-        onstart: (event) => {
-          console.log('Drag started', this.tableState.id);
-          event.target.classList.add('dragging');
-          this.bringToFront.emit(this.tableState.id);
-        },
-        onmove: (event) => {
-          // Update position in real-time
-          this.currentPosition.x += event.dx;
-          this.currentPosition.y += event.dy;
-          
-          // Update element style directly for smooth movement
-          event.target.style.transform = 
-            `translate(${this.currentPosition.x}px, ${this.currentPosition.y}px)`;
-          
-          console.log(`Moving to ${this.currentPosition.x}, ${this.currentPosition.y}`);
-        },
-        onend: (event) => {
-          console.log('Drag ended', this.currentPosition);
-          event.target.classList.remove('dragging');
-          
-          // Emit position change event
-          this.positionChange.emit({
-            id: this.tableState.id,
-            position: { 
-              x: this.currentPosition.x,
-              y: this.currentPosition.y
-            }
-          });
+        listeners: {
+          start: (event) => {
+            console.log('Drag started', this.tableState.id, this.currentPosition);
+            event.target.classList.add('dragging');
+            this.bringToFront.emit(this.tableState.id);
+          },
+          move: (event) => {
+            // Add debug log before move
+            console.log('Before move:', 
+              element.style.transform, 
+              this.currentPosition.x, 
+              this.currentPosition.y
+            );
+            
+            // Update position in real-time
+            this.currentPosition.x += event.dx;
+            this.currentPosition.y += event.dy;
+            
+            // Apply new transform directly (WITHOUT using Angular binding)
+            event.target.style.transform = 
+              `translate(${this.currentPosition.x}px, ${this.currentPosition.y}px)`;
+            
+            // Add debug log after move
+            console.log('After move:', 
+              element.style.transform, 
+              this.currentPosition.x, 
+              this.currentPosition.y
+            );
+          },
+          end: (event) => {
+            console.log('Drag ended', this.currentPosition);
+            event.target.classList.remove('dragging');
+            
+            // Update the tableState object
+            this.tableState.x = this.currentPosition.x;
+            this.tableState.y = this.currentPosition.y;
+            
+            // Emit position change event
+            this.positionChange.emit({
+              id: this.tableState.id,
+              position: { 
+                x: this.currentPosition.x,
+                y: this.currentPosition.y
+              }
+            });
+          }
         }
       });
-      
-    // Set initial position
-    element.style.transform = `translate(${this.tableState.x}px, ${this.tableState.y}px)`;
   }
   
   private initResizable(): void {

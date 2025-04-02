@@ -4,6 +4,7 @@
   [style.width.px]="tableState.width" 
   [style.height.px]="tableState.height"
   [style.z-index]="tableState.zIndex"
+  [style.transform]="'translate(' + tableState.x + 'px, ' + tableState.y + 'px)'"
   (click)="onWindowClick()">
   
   <div #windowHeader class="window-header">
