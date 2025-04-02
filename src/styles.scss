@@ -1,4 +1,63 @@
-/* Global styles */
+/* ===== Brand Colors & Variables ===== */
+:root {
+  /* Santander Brand Colors */
+  --santander-red: #EC0000;
+  --santander-dark-red: #B30000;
+  --santander-light-red: #FF3333;
+  --santander-white: #FFFFFF;
+  --santander-black: #333333;
+  --santander-gray-light: #F2F2F2;
+  --santander-gray-medium: #D9D9D9;
+  --santander-gray-dark: #666666;
+  --santander-blue-dark: #001E50;
+  --santander-blue-light: #1A4A8E;
+  
+  /* Primary colors - Map to Santander colors */
+  --primary-color: var(--santander-red);
+  --primary-light: var(--santander-light-red);
+  --primary-dark: var(--santander-dark-red);
+  
+  /* Secondary colors - Map to Santander blues */
+  --secondary-color: var(--santander-blue-light);
+  --secondary-light: var(--santander-blue-light);
+  --secondary-dark: var(--santander-blue-dark);
+  
+  /* Neutral colors */
+  --bg-light: var(--santander-gray-light);
+  --bg-white: var(--santander-white);
+  --text-dark: var(--santander-black);
+  --text-light: var(--santander-white);
+  --border-color: var(--santander-gray-medium);
+  
+  /* Status colors */
+  --success: #2ecc71;
+  --warning: #f39c12;
+  --danger: var(--santander-red);
+  --info: var(--santander-blue-light);
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  /* Border radius */
+  --border-radius-sm: 3px;
+  --border-radius-md: 5px;
+  --border-radius-lg: 8px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --shadow-md: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  --shadow-lg: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+/* ===== Reset ===== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,35 +66,118 @@
 
 html, body {
   height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: #333;
+  color: var(--text-dark);
   overflow: hidden;
+  background-color: var(--bg-light);
 }
 
-/* Basic button styles */
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  margin-bottom: var(--spacing-md);
+  color: var(--primary-color);
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: var(--spacing-md);
+}
+
+/* ===== Button Styles ===== */
 button {
   cursor: pointer;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  transition: var(--transition-fast);
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  
+  &:hover {
+    background-color: var(--primary-light);
+    box-shadow: var(--shadow-sm);
+  }
+  
   &:focus {
     outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5);
+  }
+  
+  &:active {
+    transform: translateY(1px);
+  }
+  
+  &.secondary {
+    background-color: var(--secondary-color);
+    
+    &:hover {
+      background-color: var(--secondary-light);
+    }
+  }
+  
+  &.text-button {
+    background: transparent;
+    color: var(--primary-color);
+    
+    &:hover {
+      background-color: rgba(0,0,0,0.05);
+      box-shadow: none;
+    }
+  }
+  
+  &.small {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 12px;
+  }
+  
+  &.large {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 16px;
   }
 }
 
-/* Scrollbar styling */
+/* ===== Form Elements ===== */
+input, select, textarea {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  font-size: 14px;
+  transition: var(--transition-fast);
+  
+  &:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.25);
+  }
+}
+
+/* ===== Card/Panel Styles ===== */
+.card {
+  background-color: var(--bg-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+/* ===== Scrollbar styling ===== */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--bg-light);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 4px;
+  background: var(--primary-light);
+  border-radius: var(--border-radius-md);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+  background: var(--primary-color);
 }

@@ -1,0 +1,62 @@
+[
+  {
+    "aladdin_id":"251525",
+    "permid":4295869482,
+    "issuer_name":"Deutsche Bank AG",
+    "scs_002_ec":"EXCLUDED",
+    "scs_002_ec_old":"OK",
+    "scs_002_ec_brs":"OK",
+    "scs_002_ec_ovr":null,
+    "affected_portfolio_str":"['CPE03861', 'str_002_ec', 'CPE03912', 'str_003b_ec', 'CPE03912', 'str_003b_ec', 'EPV14005', 'str_001_s', 'EPV14005', 'str_001_s', 'FIG01998', 'str_sfdr8_aec', 'FIG01998', 'str_sfdr8_aec', 'FIG01998', 'str_sfdr8_aec', 'FIG01998', 'str_sfdr8_aec', 'FIG02787', 'str_002_ec', 'FIH01197', 'str_sfdr8_aec', 'FIH01197', 'str_sfdr8_aec', 'FIH01197', 'str_sfdr8_aec', 'FIN00315', 'str_sfdr8_aec', 'FIN00315', 'str_sfdr8_aec', 'FIN00441', 'str_sfdr8_aec', 'FIN00441', 'str_sfdr8_aec', 'FIN00441', 'str_sfdr8_aec', 'FIN00441', 'str_sfdr8_aec', 'FPG01072', 'str_001_s', 'FPG01072', 'str_001_s', 'LXMS0020', 'str_sfdr8_aec', 'LXMS0020', 'str_sfdr8_aec', 'LXMS0360', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFIT0647', 'str_sfdr8_aec', 'PFS00001', 'str_sfdr8_aec', 'PFS00001', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec']"
+  },
+  {
+    "aladdin_id":"R54462",
+    "permid":4295866480,
+    "issuer_name":"Nokia Oyj",
+    "scs_002_ec":"EXCLUDED",
+    "scs_002_ec_old":"OK",
+    "scs_002_ec_brs":"OK",
+    "scs_002_ec_ovr":null,
+    "affected_portfolio_str":"['CPE00363', 'str_003b_ec', 'CPE03744', 'scs_001_sec', 'FIG00677', 'str_004_asec', 'FPB01158', 'str_004_asec', 'LXMS0770', 'str_sfdr8_aec']"
+  },
+  {
+    "aladdin_id":"D31703",
+    "permid":4295875844,
+    "issuer_name":"Prysmian SpA",
+    "scs_002_ec":"EXCLUDED",
+    "scs_002_ec_old":"OK",
+    "scs_002_ec_brs":"OK",
+    "scs_002_ec_ovr":null,
+    "affected_portfolio_str":"['EPV00060', 'str_001_s', 'FIG02787', 'str_002_ec', 'FIG05428', 'str_sfdr8_aec', 'FIH00529', 'str_005_ec', 'FPG00004', 'str_sfdr8_aec', 'FPG00005', 'str_sfdr8_aec', 'FPG00010', 'str_sfdr8_aec', 'FPG00018', 'str_sfdr8_aec', 'FPG00027', 'str_001_s', 'FPG00028', 'str_001_s', 'FPG00376', 'str_sfdr8_aec', 'FPG00603', 'str_001_s', 'FPG01119', 'str_sfdr8_aec', 'FPG01213', 'str_001_s', 'FPG01214', 'str_001_s', 'FPG01278', 'str_003_ec', 'FPG15900', 'str_sfdr8_aec', 'FPG20002', 'str_sfdr8_aec', 'FPH00706', 'str_sfdr8_aec']"
+  },
+  {
+    "aladdin_id":"R55620",
+    "permid":4295874870,
+    "issuer_name":"Ryanair Holdings PLC",
+    "scs_002_ec":"EXCLUDED",
+    "scs_002_ec_old":"OK",
+    "scs_002_ec_brs":"OK",
+    "scs_002_ec_ovr":null,
+    "affected_portfolio_str":"['EPV00043', 'str_001_s', 'EPV00060', 'str_001_s', 'FIG02164', 'str_sfdr8_aec', 'FIG02787', 'str_002_ec', 'FIG05428', 'str_sfdr8_aec', 'FIH00529', 'str_005_ec', 'FPG00027', 'str_001_s', 'FPG00028', 'str_001_s', 'FPG00112', 'str_001_s', 'FPG00603', 'str_001_s', 'FPG01213', 'str_001_s', 'FPG01214', 'str_001_s', 'LXMS0040', 'str_sfdr8_aec', 'LXMS0240', 'str_sfdr8_aec', 'PFIT0516', 'str_sfdr8_aec']"
+  },
+  {
+    "aladdin_id":"R77126",
+    "permid":4295895205,
+    "issuer_name":"Standard Chartered PLC",
+    "scs_002_ec":"EXCLUDED",
+    "scs_002_ec_old":"OK",
+    "scs_002_ec_brs":"OK",
+    "scs_002_ec_ovr":null,
+    "affected_portfolio_str":"['CPE00264', 'str_003b_ec', 'CPE00363', 'str_003b_ec', 'CPE00448', 'str_003b_ec', 'CPE04036', 'str_003b_ec', 'CPE04080', 'str_003b_ec', 'CPE04081', 'str_003b_ec', 'CPE04082', 'str_003b_ec', 'CPE05134', 'str_003b_ec', 'CPE05340', 'str_003b_ec', 'FIG00677', 'str_004_asec', 'FIG00677', 'str_004_asec', 'FIG01998', 'str_sfdr8_aec', 'FIG01998', 'str_sfdr8_aec', 'FIG05240', 'str_004_asec', 'FIG05241', 'str_004_asec', 'FIG05402', 'str_004_asec', 'FPB01158', 'str_004_asec', 'LXMS0020', 'str_sfdr8_aec', 'LXMS0360', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFS00001', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec']"
+  },
+  {
+    "aladdin_id":"R61465",
+    "permid":4295862902,
+    "issuer_name":"Toronto-Dominion Bank",
+    "scs_002_ec":"EXCLUDED",
+    "scs_002_ec_old":"OK",
+    "scs_002_ec_brs":"OK",
+    "scs_002_ec_ovr":"FLAG",
+    "affected_portfolio_str":"['LXMS0580', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec']"
+  }
+]

@@ -25,20 +25,28 @@ export class AppComponent implements OnInit {
     });
   }
   
+  // Auto tiling functionality removed
+  
   onCloseTable(id: string): void {
     this.dataService.removeTable(id);
   }
   
-  onTogglePin(id: string): void {
-    this.dataService.togglePinned(id);
-  }
+  // Pin toggling removed
   
   onPositionChange(event: {id: string, position: {x: number, y: number}}): void {
-    this.dataService.updateTablePosition(event.id, event.position);
+    // Use the position object correctly - make sure to handle x and y specifically
+    this.dataService.updateTablePosition(event.id, {
+      x: event.position.x,
+      y: event.position.y
+    });
   }
   
   onSizeChange(event: {id: string, size: {width: number, height: number}}): void {
-    this.dataService.updateTablePosition(event.id, event.size);
+    // Use the size object correctly - make sure to handle width and height specifically
+    this.dataService.updateTablePosition(event.id, {
+      width: event.size.width,
+      height: event.size.height
+    });
   }
   
   onBringToFront(id: string): void {

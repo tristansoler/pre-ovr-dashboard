@@ -3,27 +3,30 @@
   height: 100%;
   overflow: auto;
   padding: 1px;
+  position: relative;
+  max-height: inherit;
 }
 
 .data-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
-  background-color: white;
+  background-color: var(--bg-white);
   
   th, td {
-    padding: 8px 12px;
+    padding: var(--spacing-sm) var(--spacing-md);
     text-align: left;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--border-color);
     white-space: nowrap;
     
     &:not(:last-child) {
-      border-right: 1px solid #e0e0e0;
+      border-right: 1px solid var(--border-color);
     }
   }
   
   th {
-    background-color: #f5f5f5;
+    background-color: var(--primary-color);
+    color: var(--text-light);
     font-weight: 500;
     cursor: pointer;
     user-select: none;
@@ -32,39 +35,55 @@
     z-index: 1;
     
     &:hover {
-      background-color: #e8f4f8;
+      background-color: var(--primary-light);
     }
   }
   
   .filter-row th {
-    padding: 4px 8px;
+    padding: var(--spacing-xs) var(--spacing-sm);
     position: sticky;
     top: 37px;
     z-index: 1;
+    background-color: var(--primary-light);
   }
   
-  tbody tr:hover {
-    background-color: #f9f9f9;
+  tbody tr {
+    &:nth-child(even) {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+    
+    &:hover {
+      background-color: var(--bg-light);
+    }
   }
 }
 
 .sort-indicator {
   font-size: 10px;
-  margin-left: 4px;
+  margin-left: var(--spacing-xs);
   display: inline-block;
   width: 10px;
 }
 
 .filter-input {
   width: 100%;
-  padding: 4px 8px;
+  padding: var(--spacing-xs) var(--spacing-sm);
   font-size: 12px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  background-color: rgba(255, 255, 255, 0.9);
+  
+  &:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.25);
+  }
 }
 
 .no-data {
   text-align: center;
-  color: #888;
-  padding: 24px 0;
+  color: var(--text-dark);
+  opacity: 0.6;
+  padding: var(--spacing-xl) 0;
+  font-style: italic;
 }

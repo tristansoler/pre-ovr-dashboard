@@ -23,10 +23,14 @@ export class DataTableComponent implements OnInit {
   filterValues: Record<string, string> = {};
   
   ngOnInit(): void {
+    console.log('DataTable ngOnInit - data:', this.data);
+    console.log('DataTable ngOnInit - columns:', this.columns);
     this.applyFiltersAndSort();
   }
   
   ngOnChanges(): void {
+    console.log('DataTable ngOnChanges - data:', this.data?.length);
+    console.log('DataTable ngOnChanges - columns:', this.columns);
     this.applyFiltersAndSort();
   }
   
@@ -60,8 +64,19 @@ export class DataTableComponent implements OnInit {
       const filterValue = this.filterValues[column]?.toLowerCase();
       if (filterValue) {
         result = result.filter(row => {
-          const cellValue = String(row[column] || '').toLowerCase();
-          return cellValue.includes(filterValue);
+          const value = row[column];
+          let stringValue: string;
+          
+          // Convert various data types to string for filtering
+          if (Array.isArray(value)) {
+            stringValue = this.arrayToString(value).toLowerCase();
+          } else if (typeof value === 'object' && value !== null) {
+            stringValue = this.objectToString(value).toLowerCase();
+          } else {
+            stringValue = String(value || '').toLowerCase();
+          }
+          
+          return stringValue.includes(filterValue);
         });
       }
     });
@@ -72,6 +87,24 @@ export class DataTableComponent implements OnInit {
         const aValue = a[this.sortState.column!];
         const bValue = b[this.sortState.column!];
         
+        // Handle array values
+        if (Array.isArray(aValue) && Array.isArray(bValue)) {
+          const aStr = this.arrayToString(aValue);
+          const bStr = this.arrayToString(bValue);
+          return this.sortState.direction === 'asc'
+            ? aStr.localeCompare(bStr)
+            : bStr.localeCompare(aStr);
+        }
+        
+        // Handle object values
+        if (this.isObject(aValue) && this.isObject(bValue)) {
+          const aStr = this.objectToString(aValue);
+          const bStr = this.objectToString(bValue);
+          return this.sortState.direction === 'asc'
+            ? aStr.localeCompare(bStr)
+            : bStr.localeCompare(aStr);
+        }
+        
         // Handle numeric values
         if (!isNaN(Number(aValue)) && !isNaN(Number(bValue))) {
           return this.sortState.direction === 'asc' 
@@ -79,7 +112,7 @@ export class DataTableComponent implements OnInit {
             : Number(bValue) - Number(aValue);
         }
         
-        // Handle string values
+        // Handle string values and fallback for other types
         const aString = String(aValue || '').toLowerCase();
         const bString = String(bValue || '').toLowerCase();
         
@@ -99,5 +132,25 @@ export class DataTableComponent implements OnInit {
       return '';
     }
     return this.sortState.direction === 'asc' ? '▲' : '▼';
+  }
+  
+  isArray(value: any): boolean {
+    return Array.isArray(value);
+  }
+  
+  isObject(value: any): boolean {
+    return typeof value === 'object' && value !== null && !Array.isArray(value);
+  }
+  
+  arrayToString(arr: any[]): string {
+    if (!arr) return '';
+    return arr.join(', ');
+  }
+  
+  objectToString(obj: any): string {
+    if (!obj) return '';
+    return Object.entries(obj)
+      .map(([key, value]) => `${key}: ${value}`)
+      .join(', ');
   }
 }

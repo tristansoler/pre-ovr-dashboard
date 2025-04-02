@@ -20,7 +20,19 @@
     </thead>
     <tbody>
       <tr *ngFor="let row of filteredData">
-        <td *ngFor="let column of columns">{{ row[column] }}</td>
+        <td *ngFor="let column of columns">
+          <ng-container *ngIf="isArray(row[column]); else notArray">
+            {{ arrayToString(row[column]) }}
+          </ng-container>
+          <ng-template #notArray>
+            <ng-container *ngIf="isObject(row[column]); else notObject">
+              {{ objectToString(row[column]) }}
+            </ng-container>
+            <ng-template #notObject>
+              {{ row[column] }}
+            </ng-template>
+          </ng-template>
+        </td>
       </tr>
       <tr *ngIf="filteredData.length === 0">
         <td [attr.colspan]="columns.length" class="no-data">No data available</td>

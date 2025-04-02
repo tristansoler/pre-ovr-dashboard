@@ -1,20 +1,20 @@
-import { Component, Input, Output, EventEmitter, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ElementRef, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CdkDrag, CdkDragEnd, CdkDragHandle } from '@angular/cdk/drag-drop';
+import { CdkDrag, CdkDragEnd, CdkDragHandle, DragDropModule } from '@angular/cdk/drag-drop';
 import { DataTableComponent } from '../data-table/data-table.component';
 import { TableState } from '../../services/data.service';
 
 @Component({
   selector: 'app-data-window',
   standalone: true,
-  imports: [CommonModule, CdkDrag, CdkDragHandle, DataTableComponent],
+  imports: [CommonModule, CdkDrag, CdkDragHandle, DragDropModule, DataTableComponent],
   templateUrl: './data-window.component.html',
   styleUrl: './data-window.component.scss'
 })
-export class DataWindowComponent implements OnInit {
+export class DataWindowComponent implements OnInit, AfterViewInit {
   @Input() tableState!: TableState;
   @Output() close = new EventEmitter<string>();
-  @Output() togglePin = new EventEmitter<string>();
+  // Pin toggle removed
   @Output() positionChange = new EventEmitter<{id: string, position: {x: number, y: number}}>(); 
   @Output() sizeChange = new EventEmitter<{id: string, size: {width: number, height: number}}>(); 
   @Output() bringToFront = new EventEmitter<string>();
@@ -30,22 +30,40 @@ export class DataWindowComponent implements OnInit {
   
   ngOnInit(): void {
     // Initial position and size are set via CSS using the tableState inputs
+    console.log('Window initialized:', this.tableState);
+    
+    // Ensure we have valid position values
+    if (this.tableState.x === undefined) this.tableState.x = 0;
+    if (this.tableState.y === undefined) this.tableState.y = 0;
+  }
+  
+  ngAfterViewInit(): void {
+    // Ensure window is properly positioned and sized after view is initialized
+    setTimeout(() => {
+      if (this.windowElement) {
+        console.log('Window element rendered:', this.windowElement.nativeElement);
+      }
+    }, 0);
   }
   
   onDragStarted(): void {
-    if (!this.tableState.pinned) {
-      this.bringToFront.emit(this.tableState.id);
-    }
+    this.bringToFront.emit(this.tableState.id);
   }
   
   onDragEnded(event: CdkDragEnd): void {
-    if (!this.tableState.pinned) {
-      const position = event.source.getFreeDragPosition();
-      this.positionChange.emit({
-        id: this.tableState.id, 
-        position: {x: position.x, y: position.y}
-      });
-    }
+    // Get the final drag position directly from the CDK event
+    const position = event.source.getFreeDragPosition();
+    
+    // Making sure position is properly captured and emitted
+    console.log('Drag ended, new position:', position);
+    console.log('Window element:', this.windowElement?.nativeElement.getBoundingClientRect());
+    console.log('Previous position state:', {x: this.tableState.x, y: this.tableState.y});
+    
+    // Emit the position change event with the updated coordinates
+    this.positionChange.emit({
+      id: this.tableState.id, 
+      position: {x: position.x, y: position.y}
+    });
   }
   
   onWindowClick(): void {
@@ -57,16 +75,9 @@ export class DataWindowComponent implements OnInit {
     this.close.emit(this.tableState.id);
   }
   
-  onPinClick(event: MouseEvent): void {
-    event.stopPropagation();
-    this.togglePin.emit(this.tableState.id);
-  }
+  // Pin click handler removed
   
   startResize(event: MouseEvent): void {
-    if (this.tableState.pinned) {
-      return;
-    }
-    
     event.preventDefault();
     event.stopPropagation();
     

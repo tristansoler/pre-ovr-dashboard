@@ -1,0 +1,32 @@
+[
+  {
+    "aladdin_id":"G07060",
+    "permid":5037629126,
+    "issuer_name":"Eaton Corporation PLC",
+    "str_002_ec":"EXCLUDED",
+    "str_002_ec_old":"OK",
+    "str_002_ec_brs":"OK",
+    "str_002_ec_ovr":null,
+    "affected_portfolio_str":"['EPV14004', 'str_001_s', 'FIG05774', 'str_sfdr8_aec', 'FPG01697', 'str_001_s', 'LXMS0720', 'str_001_s']"
+  },
+  {
+    "aladdin_id":"R54462",
+    "permid":4295866480,
+    "issuer_name":"Nokia Oyj",
+    "str_002_ec":"EXCLUDED",
+    "str_002_ec_old":"OK",
+    "str_002_ec_brs":"OK",
+    "str_002_ec_ovr":null,
+    "affected_portfolio_str":"['CPE00363', 'str_003b_ec', 'CPE03744', 'scs_001_sec', 'FIG00677', 'str_004_asec', 'FPB01158', 'str_004_asec', 'LXMS0770', 'str_sfdr8_aec']"
+  },
+  {
+    "aladdin_id":"R55620",
+    "permid":4295874870,
+    "issuer_name":"Ryanair Holdings PLC",
+    "str_002_ec":"EXCLUDED",
+    "str_002_ec_old":"OK",
+    "str_002_ec_brs":"OK",
+    "str_002_ec_ovr":null,
+    "affected_portfolio_str":"['EPV00043', 'str_001_s', 'EPV00060', 'str_001_s', 'FIG02164', 'str_sfdr8_aec', 'FIG02787', 'str_002_ec', 'FIG05428', 'str_sfdr8_aec', 'FIH00529', 'str_005_ec', 'FPG00027', 'str_001_s', 'FPG00028', 'str_001_s', 'FPG00112', 'str_001_s', 'FPG00603', 'str_001_s', 'FPG01213', 'str_001_s', 'FPG01214', 'str_001_s', 'LXMS0040', 'str_sfdr8_aec', 'LXMS0240', 'str_sfdr8_aec', 'PFIT0516', 'str_sfdr8_aec']"
+  }
+]

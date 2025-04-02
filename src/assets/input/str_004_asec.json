@@ -1,0 +1,92 @@
+[
+  {
+    "aladdin_id":"E97445",
+    "permid":5000757618,
+    "issuer_name":"ABN Amro Bank NV",
+    "str_004_asec":"EXCLUDED",
+    "str_004_asec_old":"OK",
+    "str_004_asec_brs":"OK",
+    "str_004_asec_ovr":null,
+    "affected_portfolio_str":"['FIG00677', 'str_004_asec', 'FIG01998', 'str_sfdr8_aec', 'FIG01998', 'str_sfdr8_aec', 'FIG01998', 'str_sfdr8_aec', 'FIG02787', 'str_002_ec', 'FIG02787', 'str_002_ec', 'FIG02787', 'str_002_ec', 'FIG04868', 'str_sfdr8_aec', 'FIG05240', 'str_004_asec', 'FIG05240', 'str_004_asec', 'FIG05241', 'str_004_asec', 'FIG05241', 'str_004_asec', 'FIG05402', 'str_004_asec', 'FIG05402', 'str_004_asec', 'FIG05402', 'str_004_asec', 'FIG05402', 'str_004_asec', 'FIG05402', 'str_004_asec', 'FIG05402', 'str_004_asec', 'FIG05698', 'str_sfdr8_aec', 'FIG05698', 'str_sfdr8_aec', 'FPB01158', 'str_004_asec', 'LXMS0020', 'str_sfdr8_aec', 'LXMS0020', 'str_sfdr8_aec', 'LXMS0020', 'str_sfdr8_aec', 'LXMS0020', 'str_sfdr8_aec', 'LXMS0360', 'str_sfdr8_aec', 'LXMS0580', 'str_sfdr8_aec', 'LXMS0580', 'str_sfdr8_aec', 'LXMS0730', 'str_sfdr8_aec', 'PFI01549', 'str_sfdr8_aec', 'PFI01549', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFS00001', 'str_sfdr8_aec', 'PFS00001', 'str_sfdr8_aec', 'PFS00001', 'str_sfdr8_aec', 'PFS00002', 'str_sfdr8_aec', 'PFS00002', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec', 'PFS00365', 'str_sfdr8_aec']"
+  },
+  {
+    "aladdin_id":"G07060",
+    "permid":5037629126,
+    "issuer_name":"Eaton Corporation PLC",
+    "str_004_asec":"EXCLUDED",
+    "str_004_asec_old":"OK",
+    "str_004_asec_brs":"OK",
+    "str_004_asec_ovr":null,
+    "affected_portfolio_str":"['EPV14004', 'str_001_s', 'FIG05774', 'str_sfdr8_aec', 'FPG01697', 'str_001_s', 'LXMS0720', 'str_001_s']"
+  },
+  {
+    "aladdin_id":"R63514",
+    "permid":4295868961,
+    "issuer_name":"Heidelberg Materials AG",
+    "str_004_asec":"EXCLUDED",
+    "str_004_asec_old":"OK",
+    "str_004_asec_brs":"OK",
+    "str_004_asec_ovr":null,
+    "affected_portfolio_str":"['EPV00043', 'str_001_s', 'FIG01998', 'str_sfdr8_aec', 'FIG02787', 'str_002_ec', 'FIG02787', 'str_002_ec', 'FIG05240', 'str_004_asec', 'FIG05241', 'str_004_asec', 'FIG05402', 'str_004_asec', 'FPG00112', 'str_001_s', 'LXMS0240', 'str_sfdr8_aec', 'PFIT0516', 'str_sfdr8_aec']"
+  },
+  {
+    "aladdin_id":"G15666",
+    "permid":5036874979,
+    "issuer_name":"HeidelbergCement Finance Luxembourg SA",
+    "str_004_asec":"EXCLUDED",
+    "str_004_asec_old":"OK",
+    "str_004_asec_brs":"OK",
+    "str_004_asec_ovr":null,
+    "affected_portfolio_str":"['FIG00677', 'str_004_asec', 'FIG01998', 'str_sfdr8_aec', 'FIG01998', 'str_sfdr8_aec', 'FPB01158', 'str_004_asec', 'LXMS0020', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFS00001', 'str_sfdr8_aec', 'PFS00002', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec']"
+  },
+  {
+    "aladdin_id":"R54462",
+    "permid":4295866480,
+    "issuer_name":"Nokia Oyj",
+    "str_004_asec":"EXCLUDED",
+    "str_004_asec_old":"OK",
+    "str_004_asec_brs":"OK",
+    "str_004_asec_ovr":null,
+    "affected_portfolio_str":"['CPE00363', 'str_003b_ec', 'CPE03744', 'scs_001_sec', 'FIG00677', 'str_004_asec', 'FPB01158', 'str_004_asec', 'LXMS0770', 'str_sfdr8_aec']"
+  },
+  {
+    "aladdin_id":"J66817",
+    "permid":5060588378,
+    "issuer_name":"Nordea Bank Abp",
+    "str_004_asec":"EXCLUDED",
+    "str_004_asec_old":"OK",
+    "str_004_asec_brs":"OK",
+    "str_004_asec_ovr":null,
+    "affected_portfolio_str":"['FIG00677', 'str_004_asec', 'FIG01998', 'str_sfdr8_aec', 'FIG02787', 'str_002_ec', 'FIG02787', 'str_002_ec', 'FIG04868', 'str_sfdr8_aec', 'FIG05240', 'str_004_asec', 'FIG05240', 'str_004_asec', 'FIG05241', 'str_004_asec', 'FIG05402', 'str_004_asec', 'FIG05402', 'str_004_asec', 'FIG05402', 'str_004_asec', 'FPB01158', 'str_004_asec', 'FPB01158', 'str_004_asec', 'LXMS0020', 'str_sfdr8_aec', 'LXMS0020', 'str_sfdr8_aec', 'LXMS0020', 'str_sfdr8_aec', 'LXMS0580', 'str_sfdr8_aec', 'PFI01549', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFS00001', 'str_sfdr8_aec', 'PFS00001', 'str_sfdr8_aec', 'PFS00002', 'str_sfdr8_aec', 'PFS00002', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec']"
+  },
+  {
+    "aladdin_id":"89232N",
+    "permid":4296540208,
+    "issuer_name":"Toyota Finance Australia Ltd",
+    "str_004_asec":"EXCLUDED",
+    "str_004_asec_old":"OK",
+    "str_004_asec_brs":"OK",
+    "str_004_asec_ovr":null,
+    "affected_portfolio_str":"['FIG00677', 'str_004_asec', 'FIG04868', 'str_sfdr8_aec', 'FPB01158', 'str_004_asec', 'PFIT0011', 'str_sfdr8_aec']"
+  },
+  {
+    "aladdin_id":"892332",
+    "permid":4295900901,
+    "issuer_name":"Toyota Motor Credit Corp",
+    "str_004_asec":"EXCLUDED",
+    "str_004_asec_old":"OK",
+    "str_004_asec_brs":"OK",
+    "str_004_asec_ovr":null,
+    "affected_portfolio_str":"['FIG01998', 'str_sfdr8_aec', 'FIG01998', 'str_sfdr8_aec', 'FIG01998', 'str_sfdr8_aec', 'FIG02787', 'str_002_ec', 'LXMS0020', 'str_sfdr8_aec', 'LXMS0020', 'str_sfdr8_aec', 'LXMS0020', 'str_sfdr8_aec', 'LXMS0360', 'str_sfdr8_aec', 'PFI01549', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFS00001', 'str_sfdr8_aec', 'PFS00001', 'str_sfdr8_aec', 'PFS00002', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec', 'PFS00365', 'str_sfdr8_aec']"
+  },
+  {
+    "aladdin_id":"R93558",
+    "permid":4296771984,
+    "issuer_name":"Toyota Motor Finance Netherlands BV",
+    "str_004_asec":"EXCLUDED",
+    "str_004_asec_old":"OK",
+    "str_004_asec_brs":"OK",
+    "str_004_asec_ovr":null,
+    "affected_portfolio_str":"['CPE00035', 'str_003b_ec', 'CPE00264', 'str_003b_ec', 'CPE03861', 'str_002_ec', 'CPE03912', 'str_003b_ec', 'CPE04041', 'str_003b_ec', 'CPE04044', 'str_003b_ec', 'CPE04059', 'str_003b_ec', 'CPE05189', 'str_003b_ec', 'CPE05190', 'str_003b_ec', 'CPE05318', 'str_003b_ec', 'FIG00677', 'str_004_asec', 'FIG00677', 'str_004_asec', 'FIG02787', 'str_002_ec', 'FIG04868', 'str_sfdr8_aec', 'FIG04868', 'str_sfdr8_aec', 'FIG04868', 'str_sfdr8_aec', 'FIG04868', 'str_sfdr8_aec', 'FIH01197', 'str_sfdr8_aec', 'FIN00315', 'str_sfdr8_aec', 'FIN00441', 'str_sfdr8_aec', 'FPB01158', 'str_004_asec', 'FPB01158', 'str_004_asec', 'FPB01158', 'str_004_asec', 'FPG00233', 'str_sfdr8_aec', 'FPG01212', 'str_sfdr8_aec', 'LXMS0020', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFS00001', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec']"
+  }
+]

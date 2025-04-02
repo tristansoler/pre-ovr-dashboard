@@ -6,7 +6,8 @@
     <div 
       *ngFor="let table of availableTables" 
       class="table-item"
-      (click)="addTable(table)">
+      [ngClass]="{'active': isTableActive(table.id)}"
+      (click)="toggleTable(table)">
       {{ table.name }}
     </div>
   </div>

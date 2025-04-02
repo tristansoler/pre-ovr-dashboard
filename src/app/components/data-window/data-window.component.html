@@ -1,14 +1,12 @@
 <div 
   #window
   class="data-window" 
-  [class.pinned]="tableState.pinned"
-  [style.left.px]="tableState.x" 
-  [style.top.px]="tableState.y"
   [style.width.px]="tableState.width" 
   [style.height.px]="tableState.height"
   [style.z-index]="tableState.zIndex"
   cdkDrag
-  [cdkDragDisabled]="tableState.pinned"
+  [cdkDragFreeDragPosition]="{x: tableState.x, y: tableState.y}"
+  [cdkDragBoundary]="'.main-content'"
   (cdkDragStarted)="onDragStarted()"
   (cdkDragEnded)="onDragEnded($event)"
   (click)="onWindowClick()">
@@ -16,24 +14,28 @@
   <div class="window-header" cdkDragHandle>
     <div class="window-title">{{ tableState.name }}</div>
     <div class="window-controls">
-      <button class="pin-button" (click)="onPinClick($event)">
-        <i [class]="tableState.pinned ? 'pinned' : 'unpinned'">📌</i>
+      <button class="close-button" (click)="onCloseClick($event)" title="Close window">
+        ✕
       </button>
-      <button class="close-button" (click)="onCloseClick($event)">✕</button>
     </div>
   </div>
   
   <div class="window-content">
-    <app-data-table 
-      [data]="tableState.data || []" 
-      [columns]="tableState.columns || []">
-    </app-data-table>
+    <div *ngIf="!tableState.data || tableState.data.length === 0" class="loading-indicator">
+      Loading data...
+    </div>
+    <div *ngIf="tableState.data && tableState.data.length > 0">
+      <div class="data-info">Rows: {{tableState.data?.length}}, Columns: {{tableState.columns?.length}}</div>
+      <app-data-table 
+        [data]="tableState.data" 
+        [columns]="tableState.columns || []">
+      </app-data-table>
+    </div>
   </div>
   
   <div 
     #resizeHandle
     class="resize-handle" 
-    [class.disabled]="tableState.pinned"
     (mousedown)="startResize($event)">
     ⤡
   </div>

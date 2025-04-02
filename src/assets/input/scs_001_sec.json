@@ -1,0 +1,32 @@
+[
+  {
+    "aladdin_id":"172967",
+    "permid":8589934316,
+    "issuer_name":"Citigroup Inc",
+    "scs_001_sec":"EXCLUDED",
+    "scs_001_sec_old":"OK",
+    "scs_001_sec_brs":"OK",
+    "scs_001_sec_ovr":null,
+    "affected_portfolio_str":"['ADM0PSA2', 'scs_002_ec', 'CPE00035', 'str_003b_ec', 'CPE00456', 'str_003b_ec', 'CPE03861', 'str_002_ec', 'CPE03867', 'str_003b_ec', 'CPE05137', 'str_003b_ec', 'CPE05318', 'str_003b_ec', 'EPH00107', 'str_004_asec', 'EPV14004', 'str_001_s', 'FIG00677', 'str_004_asec', 'FIG01998', 'str_sfdr8_aec', 'FIG01998', 'str_sfdr8_aec', 'FIG05240', 'str_004_asec', 'FIG05241', 'str_004_asec', 'FIG05402', 'str_004_asec', 'FIH01197', 'str_sfdr8_aec', 'FIN00315', 'str_sfdr8_aec', 'FIN00441', 'str_sfdr8_aec', 'FPB01158', 'str_004_asec', 'FPB01158', 'str_004_asec', 'FPG01697', 'str_001_s', 'FPH00457', 'str_004_asec', 'LXMS0020', 'str_sfdr8_aec', 'LXMS0360', 'str_sfdr8_aec', 'LXMS0360', 'str_sfdr8_aec', 'LXMS0360', 'str_sfdr8_aec', 'LXMS0360', 'str_sfdr8_aec', 'LXMS0580', 'str_sfdr8_aec', 'LXMS0580', 'str_sfdr8_aec', 'LXMS0720', 'str_001_s', 'PFI01549', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0011', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFIT0605', 'str_sfdr8_aec', 'PFS00001', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec', 'PFS00059', 'str_sfdr8_aec']"
+  },
+  {
+    "aladdin_id":"R54462",
+    "permid":4295866480,
+    "issuer_name":"Nokia Oyj",
+    "scs_001_sec":"EXCLUDED",
+    "scs_001_sec_old":"OK",
+    "scs_001_sec_brs":"OK",
+    "scs_001_sec_ovr":null,
+    "affected_portfolio_str":"['CPE00363', 'str_003b_ec', 'CPE03744', 'scs_001_sec', 'FIG00677', 'str_004_asec', 'FPB01158', 'str_004_asec', 'LXMS0770', 'str_sfdr8_aec']"
+  },
+  {
+    "aladdin_id":"D31703",
+    "permid":4295875844,
+    "issuer_name":"Prysmian SpA",
+    "scs_001_sec":"EXCLUDED",
+    "scs_001_sec_old":"OK",
+    "scs_001_sec_brs":"OK",
+    "scs_001_sec_ovr":null,
+    "affected_portfolio_str":"['EPV00060', 'str_001_s', 'FIG02787', 'str_002_ec', 'FIG05428', 'str_sfdr8_aec', 'FIH00529', 'str_005_ec', 'FPG00004', 'str_sfdr8_aec', 'FPG00005', 'str_sfdr8_aec', 'FPG00010', 'str_sfdr8_aec', 'FPG00018', 'str_sfdr8_aec', 'FPG00027', 'str_001_s', 'FPG00028', 'str_001_s', 'FPG00376', 'str_sfdr8_aec', 'FPG00603', 'str_001_s', 'FPG01119', 'str_sfdr8_aec', 'FPG01213', 'str_001_s', 'FPG01214', 'str_001_s', 'FPG01278', 'str_003_ec', 'FPG15900', 'str_sfdr8_aec', 'FPG20002', 'str_sfdr8_aec', 'FPH00706', 'str_sfdr8_aec']"
+  }
+]

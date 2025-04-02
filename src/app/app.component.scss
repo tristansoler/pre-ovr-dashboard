@@ -1,15 +1,49 @@
 .dashboard-container {
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
+  background-color: var(--bg-light);
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-md);
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.logo-container {
+  margin-right: var(--spacing-md);
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  display: block; /* Ensure it's displayed properly */
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.content-container {
+  display: flex;
+  flex: 1;
   overflow: hidden;
 }
 
 .main-content {
   flex: 1;
   position: relative;
-  background-color: #f9f9f9;
   overflow: hidden;
+  padding: var(--spacing-md);
 }
 
 .empty-message {
@@ -18,10 +52,86 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #777;
+  color: var(--text-dark);
+  opacity: 0.7;
   font-size: 1.2rem;
+  padding: var(--spacing-xl);
+  background-color: var(--bg-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
   
   p {
     margin: 0;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .color-palette {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    
+    .color-swatch {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--border-radius-sm);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease;
+      
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    
+    .primary-swatch {
+      background-color: var(--santander-red);
+    }
+    
+    .primary-light-swatch {
+      background-color: var(--santander-light-red);
+    }
+    
+    .primary-dark-swatch {
+      background-color: var(--santander-dark-red);
+    }
+    
+    .secondary-swatch {
+      background-color: var(--santander-blue-light);
+    }
+    
+    .secondary-dark-swatch {
+      background-color: var(--santander-blue-dark);
+    }
+  }
+}
+
+.control-panel {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  z-index: 1000;
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.auto-tile-button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-weight: 500;
+  box-shadow: var(--shadow-sm);
+  
+  &:hover {
+    background-color: var(--secondary-light);
+    box-shadow: var(--shadow-md);
+  }
+  
+  &:active {
+    transform: translateY(1px);
   }
 }
