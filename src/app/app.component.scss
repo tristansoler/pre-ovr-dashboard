@@ -44,6 +44,8 @@
   position: relative;
   overflow: hidden;
   padding: var(--spacing-md);
+  height: calc(100vh - 72px); /* Subtract header height */
+  width: 100%;
 }
 
 .empty-message {

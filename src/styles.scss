@@ -181,3 +181,18 @@ input, select, textarea {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-color);
 }
+
+/* InteractJS styles */
+.draggable {
+  touch-action: none;
+  user-select: none;
+}
+
+.resize-drag {
+  box-sizing: border-box;
+}
+
+/* Ensure dragging works on all elements */
+[data-x], [data-y] {
+  transform: translate(var(--x, 0), var(--y, 0));
+}

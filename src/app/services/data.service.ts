@@ -174,17 +174,42 @@ export class DataService {
     this.activeTablesSubject.next(updatedTables);
   }
 
-  updateTablePosition(tableId: string, position: Partial<TablePosition>): void {
+  updateTablePosition(tableId: string, position: {x: number, y: number}): void {
     const currentTables = this.activeTablesSubject.value;
     
     console.log('Updating position for table:', tableId, 'with new values:', position);
     
     const updatedTables = currentTables.map(table => {
       if (table.id === tableId) {
-        // Create a proper merge of the existing table with the updated position values
-        // This preserves other fields while updating only what was provided
-        const updatedTable = { ...table, ...position };
-        console.log('Updated table state:', updatedTable);
+        // Only update x and y coordinates
+        const updatedTable = { 
+          ...table, 
+          x: position.x,
+          y: position.y 
+        };
+        console.log('Updated table position:', updatedTable);
+        return updatedTable;
+      }
+      return table;
+    });
+    
+    this.activeTablesSubject.next(updatedTables);
+  }
+
+  updateTableSize(tableId: string, size: {width: number, height: number}): void {
+    const currentTables = this.activeTablesSubject.value;
+    
+    console.log('Updating size for table:', tableId, 'with new values:', size);
+    
+    const updatedTables = currentTables.map(table => {
+      if (table.id === tableId) {
+        // Only update width and height
+        const updatedTable = { 
+          ...table, 
+          width: size.width,
+          height: size.height 
+        };
+        console.log('Updated table size:', updatedTable);
         return updatedTable;
       }
       return table;

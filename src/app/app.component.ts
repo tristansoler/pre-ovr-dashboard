@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
   
   onSizeChange(event: {id: string, size: {width: number, height: number}}): void {
     // Use the size object correctly - make sure to handle width and height specifically
-    this.dataService.updateTablePosition(event.id, {
+    this.dataService.updateTableSize(event.id, {
       width: event.size.width,
       height: event.size.height
     });

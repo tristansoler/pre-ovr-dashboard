@@ -4,14 +4,9 @@
   [style.width.px]="tableState.width" 
   [style.height.px]="tableState.height"
   [style.z-index]="tableState.zIndex"
-  cdkDrag
-  [cdkDragFreeDragPosition]="{x: tableState.x, y: tableState.y}"
-  [cdkDragBoundary]="'.main-content'"
-  (cdkDragStarted)="onDragStarted()"
-  (cdkDragEnded)="onDragEnded($event)"
   (click)="onWindowClick()">
   
-  <div class="window-header" cdkDragHandle>
+  <div #windowHeader class="window-header">
     <div class="window-title">{{ tableState.name }}</div>
     <div class="window-controls">
       <button class="close-button" (click)="onCloseClick($event)" title="Close window">
@@ -25,7 +20,7 @@
       Loading data...
     </div>
     <div *ngIf="tableState.data && tableState.data.length > 0">
-      <div class="data-info">Rows: {{tableState.data?.length}}, Columns: {{tableState.columns?.length}}</div>
+      <div class="data-info">Rows: {{tableState.data.length}}, Columns: {{(tableState.columns || []).length}}</div>
       <app-data-table 
         [data]="tableState.data" 
         [columns]="tableState.columns || []">
@@ -35,8 +30,7 @@
   
   <div 
     #resizeHandle
-    class="resize-handle" 
-    (mousedown)="startResize($event)">
+    class="resize-handle">
     ⤡
   </div>
 </div>
