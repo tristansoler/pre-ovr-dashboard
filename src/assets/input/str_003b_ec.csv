@@ -1,0 +1,3 @@
+aladdin_id,permid,issuer_name,str_003b_ec,str_003b_ec_old,str_003b_ec_brs,str_003b_ec_ovr,affected_portfolio_str
+G07060,5037629126,Eaton Corporation PLC,EXCLUDED,OK,OK,,"['EPV14004', 'str_001_s', 'FIG05774', 'str_sfdr8_aec', 'FPG01697', 'str_001_s', 'LXMS0720', 'str_001_s']"
+R54462,4295866480,Nokia Oyj,EXCLUDED,OK,OK,,"['CPE00363', 'str_003b_ec', 'CPE03744', 'scs_001_sec', 'FIG00677', 'str_004_asec', 'FPB01158', 'str_004_asec', 'LXMS0770', 'str_sfdr8_aec']"

@@ -1,0 +1,30 @@
+<div class="data-table-container">
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th *ngFor="let column of columns" (click)="sortColumn(column)">
+          {{ column }} 
+          <span class="sort-indicator">{{ getSortIndicator(column) }}</span>
+        </th>
+      </tr>
+      <tr class="filter-row">
+        <th *ngFor="let column of columns">
+          <input 
+            type="text" 
+            class="filter-input" 
+            placeholder="Filter..."
+            [(ngModel)]="filterValues[column]"
+            (input)="onFilterChange()">
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of filteredData">
+        <td *ngFor="let column of columns">{{ row[column] }}</td>
+      </tr>
+      <tr *ngIf="filteredData.length === 0">
+        <td [attr.colspan]="columns.length" class="no-data">No data available</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

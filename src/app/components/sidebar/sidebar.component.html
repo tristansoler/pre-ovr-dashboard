@@ -1,0 +1,13 @@
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h2>Available Tables</h2>
+  </div>
+  <div class="table-list">
+    <div 
+      *ngFor="let table of availableTables" 
+      class="table-item"
+      (click)="addTable(table)">
+      {{ table.name }}
+    </div>
+  </div>
+</div>
