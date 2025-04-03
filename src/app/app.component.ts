@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DataWindowComponent } from './components/data-window/data-window.component';
 import { DataService, TableState } from './services/data.service';
+import { DragDropModule, CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { AgGridModule } from 'ag-grid-angular';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, SidebarComponent, DataWindowComponent],
+  imports: [CommonModule, HttpClientModule, SidebarComponent, DataWindowComponent, DragDropModule, AgGridModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

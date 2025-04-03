@@ -1,40 +1,37 @@
 <div class="dashboard-container">
   <header class="app-header">
     <div class="logo-container">
-      <img src="assets/images/logo.jpg" alt="Santander Asset Management" class="logo">
+      <img
+        src="assets/images/logo.jpg"
+        alt="Santander Asset Management"
+        class="logo"
+      />
     </div>
     <h1>ESG Pre Override Dashboard</h1>
   </header>
-  
+
   <div class="content-container">
     <!-- Sidebar component -->
     <app-sidebar></app-sidebar>
-    
+
     <!-- Main content area -->
     <div class="main-content">
-    <!-- Control panel removed -->
-    
-    <!-- Table windows -->
-    <app-data-window 
-      *ngFor="let table of activeTables" 
-      [tableState]="table"
-      (close)="onCloseTable($event)"
-      (positionChange)="onPositionChange($event)"
-      (sizeChange)="onSizeChange($event)"
-      (bringToFront)="onBringToFront($event)">
-    </app-data-window>
-    
-    <!-- Empty state message when no tables are active -->
-    <div class="empty-message" *ngIf="activeTables.length === 0">
-      <p>Select a table from the sidebar to get started</p>
-      
-      <!-- Color palette demo - only shown when empty -->
-      <div class="color-palette">
-        <div class="color-swatch primary-swatch" title="Santander Red"></div>
-        <div class="color-swatch primary-light-swatch" title="Santander Light Red"></div>
-        <div class="color-swatch primary-dark-swatch" title="Santander Dark Red"></div>
-        <div class="color-swatch secondary-swatch" title="Santander Blue Light"></div>
-        <div class="color-swatch secondary-dark-swatch" title="Santander Blue Dark"></div>
+      <!-- Control panel removed -->
+
+      <!-- Table windows -->
+      <app-data-window
+        *ngFor="let table of activeTables"
+        [tableState]="table"
+        (close)="onCloseTable($event)"
+        (positionChange)="onPositionChange($event)"
+        (sizeChange)="onSizeChange($event)"
+        (bringToFront)="onBringToFront($event)"
+      >
+      </app-data-window>
+
+      <!-- Empty state message when no tables are active -->
+      <div class="empty-message" *ngIf="activeTables.length === 0">
+        <p>Select a table from the sidebar to get started</p>
       </div>
     </div>
   </div>
