@@ -1,13 +1,14 @@
 <div 
-  #window
+  cdkDrag
+  [cdkDragFreeDragPosition]="{x: tableState.x, y: tableState.y}"
+  (cdkDragEnded)="onDragEnded($event)"
   class="data-window" 
   [style.width.px]="tableState.width" 
   [style.height.px]="tableState.height"
   [style.z-index]="tableState.zIndex"
-  [style.transform]="'translate(' + tableState.x + 'px, ' + tableState.y + 'px)'"
   (click)="onWindowClick()">
   
-  <div #windowHeader class="window-header">
+  <div cdkDragHandle class="window-header">
     <div class="window-title">{{ tableState.name }}</div>
     <div class="window-controls">
       <button class="close-button" (click)="onCloseClick($event)" title="Close window">
@@ -30,8 +31,8 @@
   </div>
   
   <div 
-    #resizeHandle
-    class="resize-handle">
+    class="resize-handle"
+    (mousedown)="onResizeMousedown($event)">
     ⤡
   </div>
 </div>
